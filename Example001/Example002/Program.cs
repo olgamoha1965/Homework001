@@ -45,6 +45,7 @@ if(user_num >= 100 && user_num < 1000)
 if(user_num >= 1000)
 {
     int user_num2 = user_num / 10;
+    start:
     if(user_num2 >= 100 && user_num2 < 1000)
     {
        int user_num3 = (user_num2 % 100) % 10; 
@@ -53,11 +54,8 @@ if(user_num >= 1000)
     else
     {
         user_num2 = user_num2 / 10;
-        if(user_num2 >= 100 && user_num2 < 1000)
-        {
-        int user_num3 = (user_num2 % 100) % 10; 
-        Console.WriteLine($"3digit number {user_num} is {user_num3}."); 
-        }
+        goto start;
+        
     }
 }
 */
